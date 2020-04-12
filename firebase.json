@@ -15,7 +15,7 @@
       ]
     },
     {
-      "target": "pcp-manager",
+      "target": "job-manager",
       "public": "dist/job-manager",
       "ignore": [
         "firebase.json",
