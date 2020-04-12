@@ -13,7 +13,7 @@
     <!-- <span class="spacer"></span> -->
   </div>
   <mat-list-item *ngFor="let job of service.ongoingJob()">
-    <mat-icon mat-list-icon>note</mat-icon>
+    <mat-icon mat-list-icon>assignment</mat-icon>
     <div mat-line>{{job.name}}</div>
     <div mat-line>{{job.updated | date}}
     </div>
@@ -24,7 +24,7 @@
   <mat-divider></mat-divider>
   <div mat-subheader>Completed Jobs</div>
   <mat-list-item *ngFor="let cjob of service.completedJob()">
-    <mat-icon mat-list-icon>closed_caption</mat-icon>
+    <mat-icon mat-list-icon>assignment_turned_in</mat-icon>
     <div mat-line>{{cjob.name}}</div>
     <div mat-line> {{cjob.updated | date}} </div>
     <button mat-icon-button color='primary'>
