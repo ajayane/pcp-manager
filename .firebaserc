@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "pcp-manager"
+  },
+  "targets": {
+    "pcp-manager": {
+      "hosting": {
+        "job-manager": [
+          "pcp-manager"
+        ]
+      }
+    }
   }
 }

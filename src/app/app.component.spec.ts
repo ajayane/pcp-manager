@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'job-manager'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('PCP Manager');
+    expect(app.title).toEqual('job-manager');
   });
 
   it('should render title', () => {

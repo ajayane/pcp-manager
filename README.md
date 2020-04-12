@@ -1,6 +1,10 @@
-# JobManager
+# PCP Manager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+
+## Firebase public server
+
+Navigate to `https://pcp-manager.web.app/`. The app will automatically deployed using bitbucket pipelines.
 
 ## Development server
 
