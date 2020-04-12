@@ -15,7 +15,7 @@
   <mat-list-item *ngFor="let job of service.ongoingJob()">
     <mat-icon mat-list-icon>assignment</mat-icon>
     <div mat-line>{{job.name}}</div>
-    <div mat-line>{{job.updated | date}}
+    <!-- <div mat-line>{{job.updated | date}} -->
     </div>
     <button mat-icon-button color='primary' [routerLink]="['/job/',job.id]" [state]="{ data: job}">
       <mat-icon>arrow_forward</mat-icon>
@@ -26,7 +26,7 @@
   <mat-list-item *ngFor="let cjob of service.completedJob()">
     <mat-icon mat-list-icon>assignment_turned_in</mat-icon>
     <div mat-line>{{cjob.name}}</div>
-    <div mat-line> {{cjob.updated | date}} </div>
+    <!-- <div mat-line> {{cjob.updated | date}} </div> -->
     <button mat-icon-button color='primary'>
       <mat-icon>arrow_forward</mat-icon>
     </button>
