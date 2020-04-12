@@ -1,0 +1,48 @@
+<mat-toolbar color='primary'>
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggleSideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="assets/images/company_logo2.png" width="40" height="40" title="Home" alt="Home"
+      class="ng-star-inserted logo">
+    <span>PCP Manager</span>
+    <span class="header-toolbar-spacer"></span>
+    <button mat-button>
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        Sign out
+      </button>
+    </mat-menu>
+    <!-- <div fxFlex fxLayout='row' fxLayoutAlign='flex-start'>
+      <ul fxLayout='row' fxLayoutGap='20px'>
+        <li>
+          <button mat-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-button>
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>persone_outlined</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Sign out
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div> -->
+  </mat-toolbar-row>
+</mat-toolbar>

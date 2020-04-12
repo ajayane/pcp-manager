@@ -1,0 +1,32 @@
+<mat-tab-group>
+  <mat-tab label="Analytics">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start stretch" fxLayoutGap="10px grid">
+      <mat-card fxFlex="25">
+        <app-widget-job-analytics [title]="'Design'"></app-widget-job-analytics>
+      </mat-card>
+      <mat-card fxFlex="25">
+        <app-widget-job-analytics [title]="'Production'"></app-widget-job-analytics>
+      </mat-card>
+      <mat-card fxFlex="25">
+        <app-widget-job-analytics [title]="'Logistics'"></app-widget-job-analytics>
+      </mat-card>
+      <mat-card fxFlex="25">
+        <app-widget-job-analytics [title]="'Project'"></app-widget-job-analytics>
+      </mat-card>
+    </div>
+
+  </mat-tab>
+  <mat-tab label="Job Card">
+    Form layout Job Card
+  </mat-tab>
+  <mat-tab label="Design">
+    <app-widget-job-section-design></app-widget-job-section-design>
+  </mat-tab>
+  <mat-tab label="Production">
+    <app-widget-job-section-production></app-widget-job-section-production>
+  </mat-tab>
+  <mat-tab label="Logistics">
+    <app-widget-job-section-logistics></app-widget-job-section-logistics>
+  </mat-tab>
+  <mat-tab label="Project"> Project Relevant Information </mat-tab>
+</mat-tab-group>

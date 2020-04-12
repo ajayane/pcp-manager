@@ -1,0 +1,24 @@
+<mat-paginator #paginator [length]="service.getElementData((job$ | async).id)?.length" [pageIndex]="0" [pageSize]="10"
+  [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+<mat-accordion displayMode="flat" multi class="mat-table">
+  <section matSort class="mat-elevation-z2 mat-header-row">
+    <span class="mat-header-cell" mat-sort-header="elemantId">Element ID</span>
+    <span class="mat-header-cell" mat-sort-header="totalQty">Total Qty</span>
+    <span class="mat-header-cell" mat-sort-header="productionQty">Production Qty</span>
+    <span class="mat-header-cell" mat-sort-header="prodBalance">Production Balance</span>
+  </section>
+
+  <mat-expansion-panel *ngFor="let item of service.getElementData((job$ | async).id)">
+    <mat-expansion-panel-header class="mat-row">
+      <span class="mat-cell">{{item.elementId}}</span>
+      <span class="mat-cell">{{item.totalQty}}</span>
+      <span class="mat-cell">{{item.productionQty}}</span>
+      <span class="mat-cell">{{item.totalQty-item.productionQty}}</span>
+    </mat-expansion-panel-header>
+    <div>
+      <pre>{{item.productionCompletionInfo | json}}</pre>
+    </div>
+  </mat-expansion-panel>
+
+</mat-accordion>

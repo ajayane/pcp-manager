@@ -1,0 +1,24 @@
+<mat-nav-list>
+  <div class="profile-card">
+    <img src='https://material.angular.io/assets/img/examples/shiba2.jpg' alt='Ajayan E'>
+    <div class="header">
+      <h2>Joe Doe</h2>
+      <h4 class="email">EMP001</h4>
+      <h4 class="designation">Managing Director</h4>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader>menu</h2>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+    <mat-icon>dashboard</mat-icon>
+    Dashboard
+  </a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/jobs">
+    <mat-icon>assignment</mat-icon>
+    Jobs
+  </a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/reports">
+    <mat-icon>table_chart</mat-icon>
+    Reports
+  </a>
+</mat-nav-list>

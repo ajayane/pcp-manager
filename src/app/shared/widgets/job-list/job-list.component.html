@@ -1,0 +1,34 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span class="toolbar-spacer"></span>
+    <button mat-button color='primary' matTooltip="Add a new Job" aria-label="Add a new Job">
+      <mat-icon aria-hidden="false" aria-label="add a new job">note_add</mat-icon>
+      ADD NEW JOB
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-list>
+
+  <div mat-subheader>Ongoing Jobs
+    <!-- <span class="spacer"></span> -->
+  </div>
+  <mat-list-item *ngFor="let job of service.ongoingJob()">
+    <mat-icon mat-list-icon>note</mat-icon>
+    <div mat-line>{{job.name}}</div>
+    <div mat-line>{{job.updated | date}}
+    </div>
+    <button mat-icon-button color='primary' [routerLink]="['/job/',job.id]" [state]="{ data: job}">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <div mat-subheader>Completed Jobs</div>
+  <mat-list-item *ngFor="let cjob of service.completedJob()">
+    <mat-icon mat-list-icon>closed_caption</mat-icon>
+    <div mat-line>{{cjob.name}}</div>
+    <div mat-line> {{cjob.updated | date}} </div>
+    <button mat-icon-button color='primary'>
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
